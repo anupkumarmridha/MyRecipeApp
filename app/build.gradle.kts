@@ -6,7 +6,7 @@ plugins {
 
 android {
     namespace = "com.example.myrecipeapp"
-    compileSdk = 34
+    compileSdk = 35
 
     defaultConfig {
         applicationId = "com.example.myrecipeapp"
@@ -56,8 +56,18 @@ dependencies {
     androidTestImplementation(libs.androidx.ui.test.junit4)
     debugImplementation(libs.androidx.ui.tooling)
     debugImplementation(libs.androidx.ui.test.manifest)
+
+
+    // Compose ViewModel
     implementation("androidx.lifecycle:lifecycle-viewmodel-compose:2.8.7")
+
+    // Retrofit for network calls
     implementation("com.squareup.retrofit2:retrofit:2.11.0")
+
+    // Gson for JSON parsing with Retrofit
     implementation("com.squareup.retrofit2:converter-gson:2.11.0")
+
+    // Coil for image loading in Compose asynchrounously
+    implementation ("io.coil-kt:coil-compose:2.5.0")
 
 }
